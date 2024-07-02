@@ -1,6 +1,3 @@
-# THIS IS A NOTE #
-
-
 class EncoderDecoder(nn.Module):
     """
     A standard Encoder-Decoder architecture. Base for this and many
