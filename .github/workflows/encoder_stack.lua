@@ -1,4 +1,4 @@
-# The encoder is composed of a stack of N=6 identical layers.
+--- The encoder is composed of a stack of N=6 identical layers.
 
 def clones(module, N):
     "Produce N identical layers."
@@ -18,7 +18,7 @@ class Encoder(nn.Module):
         return self.norm(x)
 
 
-# We employ a residual connectionaround each of the two sub-layers, followed by layer normalization
+--- We employ a residual connectionaround each of the two sub-layers, followed by layer normalization
 
 class LayerNorm(nn.Module):
     "Construct a layernorm module (See citation for details)."
@@ -34,9 +34,9 @@ class LayerNorm(nn.Module):
         std = x.std(-1, keepdim=True)
         return self.a_2 * (x - mean) / (std + self.eps) + self.b_2
 
-# Each layer has two sub-layers. 
-# The first is a multi-head self-attention mechanism
-# The second is a simple, position-wise fully connected feed-forward network.
+--- Each layer has two sub-layers. 
+--- The first is a multi-head self-attention mechanism
+--- The second is a simple, position-wise fully connected feed-forward network.
 
 class EncoderLayer(nn.Module):
     "Encoder is made up of self-attn and feed forward (defined below)"
