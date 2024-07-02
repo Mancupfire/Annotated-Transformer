@@ -1,5 +1,5 @@
-# All the libraries you need to import 
-# You can skip this part
+--- All the libraries you need to import 
+--- You can skip this part
 
 import os
 from os.path import exists
@@ -25,15 +25,13 @@ import torch.multiprocessing as mp
 from torch.nn.parallel import DistributedDataParallel as DDP
 
 
-# Set to False to skip notebook execution (e.g. for debugging)
+--- Set to False to skip notebook execution (e.g. for debugging)
 warnings.filterwarnings("ignore")
 RUN_EXAMPLES = True
 
 
 
-# Some convenience helper functions used throughout the notebook
-
-
+--- Some convenience helper functions used throughout the notebook
 def is_interactive_notebook():
     return __name__ == "__main__"
 
